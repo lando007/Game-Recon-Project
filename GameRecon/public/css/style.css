@@ -1,0 +1,234 @@
+/*
+  Styles from this codepen:
+  https://codepen.io/official_naveen/pen/rgknI
+*/
+
+body {
+    background-color: #878686;
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+	position: relative;
+	left:140px;
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 10px;
+    width: 250px;
+}
+
+.ghost-input, p {
+
+    display: block;
+    font-weight: 300;
+    width: 100%;
+    font-size: 25px;
+    border: 0px;
+    outline: none;
+    width: 100%;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #4b545f;
+    background: #2EEC2D;
+    font-family: Open Sans, Verdana;
+    padding: 10px 15px;
+    margin: 15px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.ghost-input:focus {
+    border-bottom: 1px solid #ddd;
+}
+
+.ghost-button {
+    background-color: transparent;
+    border: 2px solid #ddd;
+    padding: 10px 30px;
+    width: 100%;
+    min-width: 350px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.ghost-button:hover {
+    border: 2px solid #515151;
+}
+
+p {
+    color: #2EEC2D;
+    background: #5B5B5B;
+}
+
+p.Graph {
+    font-weight: bold;
+    color: #ECFC23;
+    background: #878686;
+}
+
+p.head {
+    left: 50%;
+    font-weight: 1000;
+    color: #2EEC2D;
+    background: #000000;
+    font-size: 40px;
+    margin: 30px 0px;
+    justify-content: center;
+    display: flex;
+
+}
+
+div.URL {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+}
+
+
+
+div.Warning {
+    font-weight: bold;
+    color: #2EEC2D;
+
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+div.Warninginfo {
+    position: relative;
+    right: 100px;
+    color: #ECFC23;
+
+
+}
+
+div.name {
+    position: relative;
+    right: 100px;
+    color: #ECFC23;
+
+    background: #transparent;
+}
+
+div.playerCount {
+    position: relative;
+    right: 100px;
+    color: #ECFC23;
+
+    background: #transparent;
+}
+
+div.reviewDesc {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+
+    background: #transparent;
+}
+
+div.Rating {
+	font-size: 20px;
+    position: relative;
+    left: 250px;
+    color: #2EEC2D;
+    text-decoration: underline;
+    background: #transparent;
+}
+div.positiveReviews {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+}
+
+div.negativeReviews {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+}
+
+div.totalNumber {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+}
+
+div.gameScore {
+    position: relative;
+    left: 250px;
+    color: #ECFC23;
+}
+
+div.gameType {
+    position: relative;
+    right: 100px;
+    color: #ECFC23;
+}
+
+div.gameDescription{
+	
+	position: relative;
+    right: 100px;
+    color: #ECFC23;
+}
+
+div.leftHeader {
+	font-size: 30px;
+    position: relative;
+    right: 100px;
+    color: #2EEC2D;
+    text-decoration: underline;
+    background: #transparent;
+
+}
+
+div.DescriptionHeader {
+	font-size: 20px;
+    position: relative;
+    right: 100px;
+    color: #2EEC2D;
+    text-decoration: underline;
+    background: #transparent;
+}
+
+div.rightHeader {
+	font-size: 30px;
+    position: relative;
+    left: 250px;
+    color: #2EEC2D;
+    text-decoration: underline;
+    background: #transparent;
+}
+
+div.imageHeader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

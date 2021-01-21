@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GameRecon</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <p>If you need help: <a class="invisible" href="HelpPage.html">Click here</a></p>
+
+</head>
+<body>
+
+<p class="head"> _ __ _____Game Recon_____ __ _</p>
+
+
+<div class="imageHeader">
+		<%var GameImageURL;
+		if(GameImageURL !== null) { %>
+			<img class="gameImg" src= "<%=GameImageURL%>">
+		<% } %>
+</div>
+
+<div class="container">
+    <fieldset>
+        <form action="/" method="post">
+            <input name="gameID" type="text/css" class="ghost-input" placeholder="Enter a Game ID" required>
+            <button class="ghost-button">Get Game information</button>
+        </form>
+
+
+        <div class="leftHeader">Game Name:</div>
+        <% var gameName;
+        if(gameName !== null){ %>
+            <div class="name"><%= gameName %></div>
+        <% } %>
+
+        <div class="rightHeader">Game Rating</div>
+        <% var reviewDesc;
+        if(reviewDesc !== null){ %>
+            <div class="reviewDesc"><%= reviewDesc %></div>
+        <% } %>
+
+        <div class="leftHeader">Players Online:</div>
+        <% var playerCount;
+        if(playerCount !== null){ %>
+            <div class="playerCount"><%= playerCount %></div>
+        <% } %>
+
+        <div class="rightHeader">Total Positive Reviews:</div>
+        <% var totalPositive;
+        if(totalPositive !== null){ %>
+            <div class="positiveReviews"><%= totalPositive %></div>
+        <% } %>
+
+        <div class="leftHeader">Parent Warnings :</div>
+        <% var gameWarning;
+        if(gameWarning !== null){ %>
+            <div class="Warninginfo"><%= gameWarning %></div>
+        <% } %>
+
+        <div class="rightHeader">Total Negative Reviews:</div>
+        <% var totalNegative;
+        if(totalNegative !== null){ %>
+            <div class="negativeReviews"><%= totalNegative %></div>
+        <% } %>
+
+        <div class="leftHeader">App Type:</div>
+        <% var gameType;
+        if(gameType !== null){ %>
+            <div class="gameType"><%= gameType %></div>
+        <% } %>
+        <div class="leftHeader">App ID:</div>
+        <% var ID;
+        if(ID !== null){ %>
+            <div class="gameType"><%= ID %></div>
+        <% } %>
+
+        <div class="rightHeader">Most Recent Helpful Review:</div>
+        <% var MostRecentHelpfulReview;
+        if(MostRecentHelpfulReview !== null){ %>
+            <div class="totalNumber"><%= MostRecentHelpfulReview %></div>
+        <% } %>
+
+        <div class="rightHeader">Most Recent Funny Review:</div>
+        <% var MostRecentFunnyReview;
+        if(MostRecentFunnyReview !== null){ %>
+            <div class="totalNumber"><%= MostRecentFunnyReview %></div>
+        <% } %>
+
+        <% var ReviewDetails;
+        if(ReviewDetails !== null){ %>
+        <% } %>
+		
+        <div class="Rating">The Rating for <%= gameName %> is: </div>
+        <% var gameScore;
+        if(gameScore !== null){ %>
+            <div class="gameScore"><%= gameScore %></div>
+        <% } %>
+
+        
+		<div class="rightHeader">Metacritic review for game:</div>
+        <% var ReviewURL;
+        if(ReviewURL !== null){ %>
+            <div class="URL"><a href="<%= ReviewURL %>">Review Link</a></div>
+        <% } %>
+		
+		<div class="rightHeader">Steam Community link for game:</div>
+        <% var CommunityLinkURL;
+        if(CommunityLinkURL !== null){ %>
+            <div class="URL"><a href="<%= CommunityLinkURL %>">Community Link</a></div>
+        <% } %>
+		
+		<button onclick="document.getElementById('gameDescription').style.display='block' ;">Click for GameDescription</button>
+        <% var gameDescription;
+        if(gameDescription !== null){ %>
+            <div id="gameDescription" style="display:none" > <%- gameDescription %></div>
+        <% } %>
+		
+
+        <div class="resp-container">
+            <input type="hidden" id="appId" value="<%= ID %>">
+            <button onclick="submitGameID()">Click for Graph</button>
+            <iframe id='url' src="about:blank" height="389px" width="100%" scrolling="no" frameborder='0'></iframe>
+
+        </div>
+
+		<% var error;
+        if(error !== null){ %>
+            <p><%= error %></p>
+        <% } %>
+		
+    </fieldset>
+
+</div>
+
+<script type="text/javascript">
+    function submitGameID() {
+        document.getElementById('url').src = "https://steamdb.info/embed/?appid=" + $('#appId').val();
+    }
+</script>
+
+
+
+</body>
+
+</html>
