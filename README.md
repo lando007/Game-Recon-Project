@@ -1,5 +1,10 @@
 # Software Engineering Project
-Languages used: 
+Languages used:\
+JavaScript\
+EJS\
+JSON\
+HTML\
+CSS\
 Welcome to GameRecon: the focus of this online website it to give users the freedom of finding important information about any Steam video game they might be interested in.\
 Program uses web scraping to retrieve the relationship between the game’s names and their ID numbers.\
 By creating a relationship, we can search ether by name or number for a specific game and use their ID numbers to send an API request to Steam for specific information.\
