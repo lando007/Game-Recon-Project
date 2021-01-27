@@ -1,4 +1,4 @@
-# Software Engineering Project
+# Software Engineering Group Project
 Languages used:\
 JavaScript\
 EJS\
